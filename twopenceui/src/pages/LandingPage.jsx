@@ -6,6 +6,8 @@ import {
     starTwinkle,
     violetBall,
 } from "../assets";
+import { NftGallery } from "../components";
+
 const LandingPage = () => {
     document.title = "Welcome to Twopince 🎉🎊🥳";
     return (
@@ -46,6 +48,11 @@ const LandingPage = () => {
                         alt=""
                         className="gradient-blur-image"
                     />
+                    <img
+                        src={violetBall}
+                        alt=""
+                        className="violet-ball-lower-right"
+                    />
                     <div className="logo-container">
                         <img
                             src="https://themegenix.net/wp/nerko-preview/assets/images/nerko-icon.svg"
@@ -69,6 +76,8 @@ const LandingPage = () => {
             </header>
 
             <img src={divider} alt="" className="divider" />
+
+            <NftGallery />
         </main>
     );
 };

@@ -23,36 +23,46 @@
     justify-content: center;
     gap: 0.5rem;
     margin-top: 100px;
+    z-index: 2;
+    position: relative;
 }
 .landing-page-header .orange-blur-ball {
     position: absolute;
     top: 100px;
-    left: 29%;
+    left: 20%;
     width: 30px;
     height: 30px;
+    animation: bounce 3s linear 0s infinite;
+}
+.landing-page-header .violet-ball-lower-right {
+    position: absolute;
+    top: 120px;
+    right: 20%;
+    height: 30px;
+    width: 30px;
     animation: bounce 3s linear 0s infinite;
 }
 .landing-page-header .violet-ball {
     position: absolute;
     top: 161px;
-    left: 13%;
+    left: 5%;
     height: 40px;
     width: 40px;
     animation: bounce 3s linear 0s infinite;
 }
 .landing-page-header .violet-ball-right {
     position: absolute;
-    top: 120px;
-    right: 30%;
-    height: 30px;
-    width: 30px;
+    top: 350px;
+    right: 25%;
+    height: 25px;
+    width: 25px;
     animation: bounce 3s linear 0s infinite;
 }
 
 .landing-page-header .orange-ball-right {
     position: absolute;
     top: 230px;
-    right: 21%;
+    right: 5%;
     height: 40px;
     width: 40px;
     animation: bounce 3s linear 0s infinite;
@@ -62,7 +72,7 @@
     height: 40px;
     position: absolute;
     top: 220px;
-    left: 33%;
+    left: 30%;
     animation: spin 10s linear 0s infinite;
 }
 .landing-page-header .star-twinkle-right {
@@ -70,15 +80,15 @@
     height: 40px;
     position: absolute;
     top: 145px;
-    right: 40%;
+    right: 35%;
     animation: spin 10s linear 0s infinite;
 }
 .landing-page-header .orange-ball-left-lower {
     width: 25px;
     height: 25px;
     position: absolute;
-    top: 291px;
-    left: 25%;
+    top: 350px;
+    left: 15%;
     animation: bounce 3s linear 0s infinite;
 }
 .landing-page-header .sign-up-sign-in-container {
@@ -86,9 +96,126 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 .landing-page-main .divider {
     display: block;
     margin: 7rem auto 0;
 }
+
+/* Nft card styling */
+.nft-gallery-conatiner {
+    column-count: 3;
+    gap: var(--font-20);
+    padding: 5rem;
+}
+.nft-gallery-conatiner .nft-card {
+    padding: 1rem;
+    background-color: #4b4257;
+    border-radius: var(--font-20);
+    cursor: pointer;
+}
+.nft-gallery-conatiner .nft-card:hover .card-overlay {
+    opacity: 1;
+}
+.nft-gallery-conatiner .nft-card:is(:hover, :focus) .nft-head-details {
+    opacity: 1;
+    transform: translateX(-50%);
+}
+.nft-gallery-conatiner .nft-card:is(:hover, :focus) .nft-author {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.nft-gallery-conatiner .nft-card .nft-img {
+    width: 100%;
+    border-radius: var(--font-10);
+}
+.nft-card .nft-head-details {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-45%);
+    top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 3rem;
+    /* transform: translateY(10px); */
+    transition: 0.3s;
+    opacity: 0;
+}
+.nft-card .nft-author {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, -30%);
+
+    opacity: 0;
+    transition: 0.3s;
+}
+.nft-card .card-overlay {
+    background-color: #00000062;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--font-20);
+    opacity: 0;
+    transition: 0.5s;
+}
 /* landing page ends */
+
+/* Mobile view */
+@media only screen and (max-width: 767px) {
+    /* LANDING PAGE */
+    .landing-page-header .gradient-blur-image {
+        width: 100%;
+    }
+    .landing-page-header .violet-ball-lower-right {
+        right: 10%;
+        top: 60px;
+    }
+    .landing-page-header .star-twinkle-right {
+        right: 20%;
+    }
+    .landing-page-header .orange-ball-right {
+        right: 1%;
+    }
+    .landing-page-header .star-twinkle {
+        left: 17%;
+    }
+    .landing-page-header .orange-blur-ball {
+        top: 40px;
+    }
+    .landing-page-header .violet-ball {
+        top: 125px;
+        display: none;
+    }
+    .landing-page-header .violet-ball-right {
+        display: none;
+    }
+
+    .landing-page-header .orange-ball-left-lower {
+        left: 5%;
+    }
+    /* LANDING PAGE ENDS*/
+
+    /* nft card */
+    .nft-gallery-conatiner {
+        padding: 2rem;
+    }
+    .nft-gallery-conatiner .nft-card {
+        padding: 0.5rem;
+    }
+    .nft-card .nft-head-details {
+        padding: 0.5rem;
+        top: 10px;
+        font-size: 14px;
+    }
+
+    /* nft card ends */
+}
+
+/* mobile view ends */
