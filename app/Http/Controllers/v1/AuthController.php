@@ -3,25 +3,20 @@
 namespace App\Http\Controllers\v1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\v1\LoginRequest;
+use App\Http\Requests\v1\RegisterRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function register(Request $request)
+    public function register(RegisterRequest $request)
     {
-        $data = $request->validate([
-            'name' => 'required|string',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|min:8|string'
-            // 'password' => Hash::make($request->password),
-
-        ]);
-
         $user = User::create(
             [
                 'name' => $request->name,
@@ -29,40 +24,32 @@ class AuthController extends Controller
                 'password' => Hash::make($request->password),
             ]
         );
-
-
         $token = $user->createToken('auth_token')->plainTextToken;
+        return response()->json([
+            'user' => $user,
+            'token' => $token,
+            'message' => 'User registered successfully',
+        ], 201);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function login(LoginRequest $request)
     {
-        //
-    }
+        if (Auth::attempt($request->only('email', 'password'))) {
+            throw ValidationException::withMessages([
+                'email' => ['The provided credentials are incorrect.'],
+            ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+            $user = Auth::user();
+            $token = $user->createToken('auth_token')->plainTextToken;
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+            return response()->json([
+                'user' => $user,
+                'token' => $token,
+                'message' => 'User logged in successfully',
+            ]);
+        }
     }
 }
