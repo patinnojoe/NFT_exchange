@@ -212,6 +212,49 @@
 
 /* landing page ends */
 
+/* sign up and  sign in styles  */
+.glassmorphic-container {
+    background: rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: #fff;
+    margin: 4rem;
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative;
+}
+.glassmorphic-container .blur-orange-ball {
+    z-index: -1;
+    filter: blur(50px);
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.glassmorphic-container .inner-container {
+    display: flex;
+}
+.inner-container .display-image-container {
+    flex: 1;
+}
+.inner-container .user-input-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.inner-container .sign-in-with-google {
+    background-color: rgba(0, 0, 0, 0.308);
+}
+/* sign in and sign up ends */
+
 /* Mobile view */
 @media only screen and (max-width: 767px) {
     /* LANDING PAGE */

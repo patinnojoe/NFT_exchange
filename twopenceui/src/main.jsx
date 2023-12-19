@@ -4,10 +4,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { LandingPage } from "./pages";
+
+import { RouterProvider } from "react-router-dom";
+import { StateContextProvider } from "./context/AuthContextProvider";
+import router from "./routes";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <LandingPage />
+        <StateContextProvider>
+            <RouterProvider router={router} />
+        </StateContextProvider>
     </React.StrictMode>
 );
