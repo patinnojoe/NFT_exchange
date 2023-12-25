@@ -72,6 +72,7 @@ p,
 li,
 div,
 ul,
+input,
 table,
 section,
 main,
@@ -94,7 +95,9 @@ a {
     background-color: transparent;
     cursor: pointer;
 }
-
+.clr-black {
+    color: #000;
+}
 /* animations */
 /* BOUNCE ANNIMATION 1️⃣*/
 @keyframes bounce {

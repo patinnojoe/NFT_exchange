@@ -21,26 +21,6 @@ const router = createBrowserRouter([
     {
         path: "/guest",
         element: <GuestLayout />,
-        // children: [
-        //     {
-        //         path: "/guest/login",
-        //         element: <Login />,
-        //     },
-
-        //     {
-        //         path: "/guest/signin",
-        //         element: <Login />,
-        //     },
-
-        //     {
-        //         path: "/guest/signup",
-        //         element: <Register />,
-        //     },
-        //     {
-        //         path: "/guest/register",
-        //         element: <Register />,
-        //     },
-        // ],
     },
 
     {
