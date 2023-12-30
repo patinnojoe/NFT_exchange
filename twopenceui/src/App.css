@@ -327,6 +327,188 @@
 
 /* sign in and sign up ends */
 
+/* App Main Header starts */
+.app-main-header {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    position: relative;
+}
+.app-main-header .app-header-logo {
+    margin-right: 5rem;
+    width: 70px;
+    height: 70px;
+}
+.app-main-header .header-link-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+.app-main-header .connect-wallet-btn {
+    padding: 0.3rem 1rem;
+    font-size: 13px;
+}
+.header-link-container .header-link {
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.header-link-container .header-link:hover {
+    color: #7b7683;
+}
+.header-link-container .header-link.header-icon {
+    color: unset;
+    font-weight: unset;
+}
+.header-link-container .header-link.header-icon:hover {
+    color: #2980b9;
+}
+.header-link-container .header-link.header-icon .icon {
+    width: 20px;
+    height: 20px;
+}
+.app-main-hero-container {
+    background-color: #180d2c;
+    padding: 2rem;
+    position: relative;
+    /* max-height: 450px; */
+}
+
+.app-main-hero-container .background-effect-left {
+    width: 70px;
+    height: 100vh;
+    filter: blur(100px);
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+.app-main-hero-container .background-effect-right {
+    width: 40px;
+    height: 100vh;
+    filter: blur(113px);
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+.app-main-hero-container .hero-banner-text-contanier {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+.hero-banner-text-contanier .eth-img {
+    position: absolute;
+    top: 35px;
+    width: 30px;
+    height: 30px;
+    transform: translate(35px, -35%);
+    left: 35%;
+}
+.hero-banner-text-contanier .orange_ball {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 30%;
+    transform: translate(0, -30%);
+}
+.hero-banner-text-contanier .open-in-opeansea_link {
+    position: relative;
+}
+.hero-banner-text-contanier .open-in-opeansea_link .view_icon {
+    fill: #e348ff;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hero-banner-text-contanier .view_opensea_span {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    box-shadow: 0 6px 32px -1px rgba(0, 0, 0, 0.08);
+    background-color: #241f2b;
+    z-index: 3;
+    border-radius: 100%;
+    transition: 0.5s;
+}
+
+.hero-banner-text-contanier .tg-circle-text-path {
+    fill: #e348ff;
+    height: auto;
+    max-width: 132px;
+    right: 10%;
+    transform-origin: center;
+    text-transform: uppercase;
+    display: inline-flex;
+    animation: spin 10s linear 0s infinite;
+}
+.hero-banner-text-contanier .btc-img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 65%;
+    transform: translate(65%, 0);
+}
+.nft-img-container {
+    position: relative;
+}
+.nft-img-container .left-img {
+    position: absolute;
+    top: 50px;
+    width: 200px;
+    height: auto;
+    left: 0;
+    border-radius: 10px;
+    z-index: 2;
+}
+.nft-img-container .cancel-x {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 20px;
+    right: 100px;
+}
+.nft-img-container .right-img {
+    position: absolute;
+    top: 85px;
+    right: -15px;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+    /* background-color: #f696ff5b; */
+}
+.nft-img-container .white-dashed {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 230px;
+    height: auto;
+    opacity: 0.3;
+}
+.gradient-filled-btn.view-in-opensea-btn {
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.hero-banner-text-contanier .hero-text_header {
+    font-size: 50px;
+    font-weight: bold;
+}
+/* App Main header ends */
+
 /* Mobile view */
 @media only screen and (max-width: 767px) {
     /* LANDING PAGE */

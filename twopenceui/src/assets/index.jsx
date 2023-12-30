@@ -7,6 +7,7 @@ import divider from "./divider.svg";
 import tigerNft from "./images/tiger-nft.jpg";
 import rabbitNft from "./images/rabbit.jpg";
 import elephantNft from "./images/elephant.jpg";
+import heroTextSVG from "./heroText.svg";
 
 export {
     gradientLandingPage,
@@ -18,4 +19,5 @@ export {
     tigerNft,
     rabbitNft,
     elephantNft,
+    heroTextSVG,
 };
