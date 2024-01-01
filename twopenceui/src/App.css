@@ -331,7 +331,6 @@
 .app-main-header {
     display: flex;
     align-items: center;
-
     justify-content: center;
     position: relative;
 }
@@ -507,6 +506,102 @@
     font-size: 50px;
     font-weight: bold;
 }
+
+/* styling app header */
+.app-main-header .app-header-logo.small-screen {
+    margin-right: 15rem;
+    width: 50px;
+    height: 50px;
+}
+.header-link-container .header-link.header-icon .icon.wallet {
+    width: 17px;
+    height: 17px;
+}
+.header-link-container .menu-btn {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.side-bar {
+    background-color: #180d2c;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    min-width: 250px;
+    border-top: 3px solid transparent;
+    border-image: linear-gradient(10deg, #2600fc, #ff00ea) 2;
+    border-image-width: 3px 0 0 0;
+    border-style: solid;
+}
+.sidebar-open .side-bar {
+    transform: translateX(0);
+}
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 2;
+}
+.side-bar .close-sidebar-btn {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: 0.7s;
+}
+.sidebar-open .side-bar .close-sidebar-btn {
+    transform: rotate(0deg);
+}
+.side-bar .sidebar-link-container {
+    list-style: none;
+    margin-top: 1rem;
+    width: 100%;
+    border-top: 1px solid #ffffff2a;
+}
+.sidebar-container {
+    overflow-x: hidden;
+}
+.side-bar .sidebar-link-container .sidebar-links {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ffffff2a;
+    width: 100%;
+    display: block;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0.7rem 2rem;
+}
+.side-bar .side-bar-social-links .icon {
+    fill: #fff;
+    width: 14px;
+    height: 14px;
+}
+.side-bar .side-bar-social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #ffffff2a;
+    padding: 0.4rem 0.5rem;
+    transition: 0.5s;
+    border-radius: 2px;
+}
+.side-bar .side-bar-social-links:hover {
+    background-color: #5e16e4;
+    border-color: transparent;
+}
+/* app header ends */
+
 /* App Main header ends */
 
 /* Mobile view */
@@ -573,6 +668,26 @@
         display: none;
     }
     /* sign up sign in ends */
+
+    /* hero section */
+    .hero-banner-text-contanier .eth-img {
+        top: -40px;
+    }
+    .hero-banner-text-contanier .view_opensea_span {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+    .hero-banner-text-contanier .orange_ball {
+        top: 280px;
+        left: 20%;
+    }
+    .hero-banner-text-contanier .btc-img {
+        bottom: 0;
+        top: unset;
+        transform: unset;
+    }
+    /* hro section ends */
 }
 
 /* mobile view ends */
