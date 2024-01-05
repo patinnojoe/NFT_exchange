@@ -80,10 +80,10 @@ const HeroSection = (props) => {
                 </span>
 
                 <div className="d-flex justify-content-between flex-wrap">
-                    <div className="d-flex flex-column gap-3 ">
+                    <div className="hero_inner_text_div">
                         <h1 className="hero-text_header">
                             Supercharge <br className="d-none d-lg-block" />{" "}
-                            your <br className="d-block d-lg-none" /> NFT{" "}
+                            your NFT
                             <br className="d-none d-lg-block" />
                             Adventure
                         </h1>
