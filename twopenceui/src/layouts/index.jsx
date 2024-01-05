@@ -1,4 +1,4 @@
-import DefaultLayout from "./DefaultLayout";
 import GuestLayout from "./GuestLayout";
+import Dashboard from "./Dashboard";
 
-export { DefaultLayout, GuestLayout };
+export { GuestLayout, Dashboard };

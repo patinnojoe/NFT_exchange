@@ -11,6 +11,7 @@
     --gradient-second: #ff00ea;
     --gradient-angle: 25deg;
     --body-color: #0f051d;
+    --text-light: #b9b5b5;
     /* FONT SIZES */
     --font-8: 0.5rem;
     --font-10: 0.625rem;
@@ -63,7 +64,7 @@ body {
     background-color: #0f051d !important;
     position: relative;
     color: #fff !important;
-    font-family: "Quicksand", sans-serif;
+    font-family: "Edu NSW ACT Foundation", cursive;
 }
 
 /* remove default padding and margin */
@@ -87,7 +88,38 @@ aside {
     margin-bottom: 0;
 }
 /* ends */
+.fnt-10 {
+    font-size: var(--font-10);
+}
+.fnt-11 {
+    font-size: var(--font-11);
+}
 
+.fnt-12 {
+    font-size: var(--font-12);
+}
+.fnt-13 {
+    font-size: var(--font-13);
+}
+
+.fnt-14 {
+    font-size: var(--font-14);
+}
+.fnt-15 {
+    font-size: var(--font-15);
+}
+
+.clr-light {
+    color: var(--text-light);
+}
+.g-5custom {
+    --bs-gutter-y: 2rem;
+    --bs-gutter-x: 2rem;
+}
+.g-3custom {
+    --bs-gutter-y: 1rem;
+    --bs-gutter-x: 1rem;
+}
 button,
 a {
     border: none;

@@ -1,9 +1,20 @@
 import { GrLinkNext } from "react-icons/gr";
 import { GoArrowUpRight } from "react-icons/go";
 import PropTypes from "prop-types";
+import PoweredBy from "./PoweredBy";
+
+import { useEffect, useState } from "react";
+import { divider } from "../assets";
 const HeroSection = (props) => {
+    const [isActive, setIsActive] = useState(false);
+
+    useEffect(() => {
+        setIsActive(true);
+    }, []);
     return (
-        <section className="app-main-hero-container">
+        <section
+            className={`app-main-hero-container ${isActive ? "active" : ""}`}
+        >
             {/* background effect left */}
             <img
                 src="https://themegenix.net/nerko/wp-content/uploads/2022/12/gradient_bg01.png"
@@ -21,7 +32,7 @@ const HeroSection = (props) => {
             {props.children}
 
             {/* banner text */}
-            <section className=" hero-banner-text-contanier">
+            <section className="hero-banner-text-contanier ">
                 {/* eth img */}
                 <img
                     className="eth-img"
@@ -69,12 +80,16 @@ const HeroSection = (props) => {
                 </span>
 
                 <div className="d-flex justify-content-between flex-wrap">
-                    <div className="d-flex flex-column gap-3 align-items-center">
+                    <div className="d-flex flex-column gap-3 ">
                         <h1 className="hero-text_header">
-                            Supercharge your <br /> NFT Adventure
+                            Supercharge <br className="d-none d-lg-block" />{" "}
+                            your <br className="d-block d-lg-none" /> NFT{" "}
+                            <br className="d-none d-lg-block" />
+                            Adventure
                         </h1>
                         <p>
-                            Find the right NFT collections to buy within the
+                            Find the right NFT collections to buy{" "}
+                            <br className="d-none d-lg-block" /> within the
                             platform.
                         </p>
                         <button className="gradient-filled-btn view-in-opensea-btn">
@@ -133,6 +148,12 @@ const HeroSection = (props) => {
                     />
                 </div>
             </section>
+
+            {/* powered By */}
+            <PoweredBy />
+
+            {/*  divider*/}
+            <img src={divider} alt="" className="powered_by_divider " />
         </section>
     );
 };

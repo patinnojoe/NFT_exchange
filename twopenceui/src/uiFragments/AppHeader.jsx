@@ -3,11 +3,31 @@ import { SiDiscord } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { FaWallet } from "react-icons/fa";
 import { BiCategory } from "react-icons/bi";
+import { useEffect, useState } from "react";
 
 import PropTypes from "prop-types";
 const AppHeader = (props) => {
+    // scroll state
+    const [isScrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            // Check if the user has scrolled down (you can adjust the threshold)
+            const scrolled = window.scrollY > 50;
+            setScrolled(scrolled);
+        };
+
+        // Add event listener for scroll
+        window.addEventListener("scroll", handleScroll);
+
+        // Clean up the event listener when the component unmounts
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header className="app-main-header">
+        <header className={`app-main-header ${isScrolled ? "scrolled" : ""}`}>
             {/* logo for large screen */}
             <img
                 className="app-header-logo  d-none d-lg-block"

@@ -370,6 +370,10 @@
 }
 .app-main-hero-container {
     background-color: #180d2c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     padding: 2rem;
     position: relative;
     /* max-height: 450px; */
@@ -379,7 +383,7 @@
     width: 70px;
     height: 100vh;
     filter: blur(100px);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 10%;
 }
@@ -387,7 +391,7 @@
     width: 40px;
     height: 100vh;
     filter: blur(113px);
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 20%;
 }
@@ -398,22 +402,33 @@
     align-items: center;
     margin-top: 100px;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 8rem;
 }
 .hero-banner-text-contanier .eth-img {
     position: absolute;
-    top: 35px;
+    top: 0;
     width: 30px;
     height: 30px;
-    transform: translate(35px, -35%);
-    left: 35%;
+    transform: translate(0, -20%) scale(0.7);
+    left: 20%;
+    opacity: 0;
+    transition: 0.7s ease;
 }
+.app-main-hero-container.active .hero-banner-text-contanier .eth-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
 .hero-banner-text-contanier .orange_ball {
     width: 20px;
     height: 20px;
     position: absolute;
-    bottom: 50px;
-    left: 30%;
+    bottom: -10px;
+    left: 0;
+    transform: translate(0, 5%);
+    transition: transform 0.5s;
+}
+.app-main-hero-container.active .hero-banner-text-contanier .orange_ball {
     transform: translate(0, -30%);
 }
 .hero-banner-text-contanier .open-in-opeansea_link {
@@ -452,12 +467,23 @@
 .hero-banner-text-contanier .btc-img {
     width: 30px;
     height: 30px;
+    left: 45%;
     position: absolute;
     top: 65%;
-    transform: translate(65%, 0);
+    transform: translate(0, -45%) scale(0.3);
+    transition: 0.7s;
+}
+
+.app-main-hero-container.active .hero-banner-text-contanier .btc-img {
+    transform: translate(65%, -45%) scale(1);
 }
 .nft-img-container {
     position: relative;
+    transform: scale(0.7);
+    transition: 0.7s ease;
+}
+.app-main-hero-container.active .nft-img-container {
+    transform: scale(1);
 }
 .nft-img-container .left-img {
     position: absolute;
@@ -474,6 +500,11 @@
     height: 25px;
     top: 20px;
     right: 100px;
+    transform: scale(0);
+    transition: 0.9s;
+}
+.app-main-hero-container.active .nft-img-container .cancel-x {
+    transform: scale(1);
 }
 .nft-img-container .right-img {
     position: absolute;
@@ -503,7 +534,7 @@
     align-items: center;
 }
 .hero-banner-text-contanier .hero-text_header {
-    font-size: 50px;
+    font-size: 60px;
     font-weight: bold;
 }
 
@@ -522,14 +553,23 @@
     height: 30px;
     cursor: pointer;
 }
-
+.app-page-inner {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.app-page-inner .main-header {
+    font-size: 50px;
+    font-weight: bold;
+}
 .side-bar {
     background-color: #180d2c;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 3;
+    z-index: 5;
     right: 0;
     transform: translateX(100%);
     transition: transform 0.5s ease;
@@ -600,12 +640,143 @@
     background-color: #5e16e4;
     border-color: transparent;
 }
+.scrolled.app-main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000a2;
+    width: 100%;
+    z-index: 4;
+    padding: 0.3rem 0;
+    transition: 0.5s ease;
+}
 /* app header ends */
 
 /* App Main header ends */
 
+/* styling powered by starts */
+
+.powered_by_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.powered_by_container.active .powered_by_header {
+    transform: scale(1);
+    opacity: 1;
+}
+.powered_by_container .powered_by_header {
+    text-transform: uppercase;
+    color: #ada8b4;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: 0.9s;
+}
+.powered_by_container .powered-by-img {
+    width: 120px;
+    height: auto;
+}
+.powered_by_container .powered-by-img.bit-go {
+    width: 100px;
+}
+.powered_by_container .sponsor_container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.powered_by_container.active .sponsor_container {
+    opacity: 1;
+}
+.app-main-hero-container .powered_by_divider {
+    width: 70px;
+    height: auto;
+    margin: 2rem auto;
+    transform: translateY(-20px);
+    transition: 0.5s ease;
+}
+.app-main-hero-container.active .powered_by_divider {
+    transform: translateY(0);
+}
+/* styling powered by ends */
+
+/* how to mint styling */
+.how_to_min_div .how-to-min-card {
+    overflow: hidden;
+    position: relative;
+    padding-top: 2rem;
+}
+.how-to-min-card .tiny-ball-top {
+    position: absolute;
+    left: 450px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+}
+.how-to-min-card .purple-ball-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 250px;
+    width: 20px;
+    height: 20px;
+}
+.how-to-min-card .cancel-x-right {
+    position: absolute;
+    bottom: 30px;
+    right: 230px;
+    width: 20px;
+    height: 20px;
+}
+.how_to_min_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+.how_to_min_div .how-to-min-card .mint_card {
+    background-color: #180d2c;
+    padding: 1rem;
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.how_to_min_div .how-to-min-card .mint_card .content {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.how_to_min_div .how-to-min-card .mint_card .content .icon {
+    width: 65px;
+    height: auto;
+}
+.how_to_min_div .mint_card .content h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+/* how to mint ends */
+
+@media screen and (min-width: 991px) {
+    .app-main-header .app-header-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 /* Mobile view */
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     /* LANDING PAGE */
     .landing-page-header .gradient-blur-image {
         width: 100%;
@@ -670,8 +841,10 @@
     /* sign up sign in ends */
 
     /* hero section */
+
     .hero-banner-text-contanier .eth-img {
         top: -40px;
+        left: 50%;
     }
     .hero-banner-text-contanier .view_opensea_span {
         top: 50%;
@@ -687,7 +860,54 @@
         top: unset;
         transform: unset;
     }
+
+    .hero-banner-text-contanier .hero-text_header {
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .app-main-hero-container .hero-banner-text-contanier {
+        gap: 4rem;
+    }
+
+    .powered_by_container .powered-by-img {
+        width: 80px;
+    }
+    .powered_by_container .sponsor_container {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .powered_by_container .powered-by-img.bit-go {
+        width: 70px;
+    }
     /* hro section ends */
+    .how_to_min_div .how-to-min-card {
+        padding: 2rem 5rem;
+    }
+    .how_to_min_div .how-to-min-card .mint_card .content .icon {
+        width: 50px;
+        height: auto;
+    }
+    .how-to-min-card .cancel-x-right {
+        position: absolute;
+        bottom: 50px;
+        right: 40px;
+        width: 20px;
+        height: 20px;
+    }
+    .how-to-min-card .purple-ball-bottom {
+        position: absolute;
+        bottom: 25px;
+        left: 40px;
+        width: 18px;
+        height: 18px;
+    }
+    .how-to-min-card .tiny-ball-top {
+        left: 130px;
+    }
 }
 
 /* mobile view ends */
