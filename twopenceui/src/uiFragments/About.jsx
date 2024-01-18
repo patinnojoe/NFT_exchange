@@ -6,6 +6,16 @@ const About = () => {
     return (
         <section className="about-us-container">
             <img src={divider} alt="" className="divider divider_size" />
+            <img
+                src="https://themegenix.net/nerko/wp-content/uploads/2022/12/ethereum-01.png"
+                alt=""
+                className="about_eth_top"
+            />
+            <img
+                src="https://themegenix.net/nerko/wp-content/uploads/2022/12/bitcoin-01.png"
+                alt=""
+                className="about_btc_down"
+            />
             <div className="platform_stat  ">
                 {/* wallets connected */}
                 <div className="fact_contaoiner">
@@ -170,6 +180,10 @@ const About = () => {
                         </div>
                     </div>
                 </section>
+            </div>
+
+            <div className="mt-4">
+                <img src={divider} alt="" height="80px" width="80px" />
             </div>
         </section>
     );

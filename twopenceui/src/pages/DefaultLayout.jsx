@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { UseStateContext } from "../context/AuthContextProvider";
 import { Dashboard } from "../layouts";
-import { About, HowToMint } from "../uiFragments";
+import { About, HowToMint, LatestWork } from "../uiFragments";
 
 // import { useEffect, useState } from "react";
 
@@ -21,6 +21,7 @@ const DefaultLayout = () => {
                 <section className="home_page_sec">
                     <HowToMint />
                     <About />
+                    <LatestWork />
                 </section>
             </section>
         </Dashboard>

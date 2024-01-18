@@ -136,6 +136,9 @@ a {
 .clr-black {
     color: #000;
 }
+.hover_color_purple:hover {
+    color: #ff00ea;
+}
 .text-gradient {
     background-color: #2600fc;
     background-image: linear-gradient(1deg, #2600fc, #ff00ea);

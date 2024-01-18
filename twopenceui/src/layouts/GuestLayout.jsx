@@ -1,6 +1,7 @@
 import { Link, Navigate } from "react-router-dom";
 import { UseStateContext } from "../context/AuthContextProvider";
 import { NftGallery } from "../components";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 import {
     divider,
@@ -95,6 +96,23 @@ const GuestLayout = () => {
             <img src={divider} alt="" className="divider" />
 
             <NftGallery />
+
+            <div
+                style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "100%",
+                    padding: "1rem 0",
+                }}
+            >
+                <Link className="gradient-filled-btn d-flex align-items-center gap-2 ">
+                    View in Opensea
+                    <FaArrowRightLong
+                        style={{ width: "20px", height: "20px" }}
+                    />
+                </Link>
+            </div>
         </main>
     );
 };
