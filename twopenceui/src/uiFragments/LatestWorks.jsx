@@ -7,7 +7,7 @@ import { divider } from "../assets";
 const LatestWork = () => {
     return (
         <div className="latest_work_container mb-3">
-            <h2 className="main-header">Latest artworks</h2>
+            <h2 className="main-header text-center">Latest artworks</h2>
             <div className="row g-5custom w-100">
                 <LatestFlipCard
                     imageURL="https://themegenix.net/wp/nerko/wp-content/uploads/2022/12/art_01.jpg"

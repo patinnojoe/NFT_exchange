@@ -6,6 +6,7 @@ import HowToMint from "./HowToMint";
 import About from "./About";
 import LatestWork from "./LatestWorks";
 import FlipCard from "./FlipCard";
+import Roadmap from "./Roadmap";
 
 export {
     AppHeader,
@@ -16,4 +17,5 @@ export {
     About,
     LatestWork,
     FlipCard,
+    Roadmap,
 };
