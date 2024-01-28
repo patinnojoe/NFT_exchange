@@ -1,8 +1,38 @@
 import { divider } from "../assets";
 import { PiSelectionPlus } from "react-icons/pi";
 import { GrSelect } from "react-icons/gr";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
+// TODO: add animation on scroll into view
 const About = () => {
+    const [scrollProgress, setScrollProgress] = useState(0);
+    const [hasScrolled, setHasScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            const scrollPercentage =
+                (scrollY / (documentHeight - windowHeight)) * 100;
+            setScrollProgress(scrollPercentage);
+
+            // Check if the scroll animation hasn't happened yet
+            if (!hasScrolled && scrollPercentage > 10) {
+                // Set the state to indicate that the scroll animation has happened
+                setHasScrolled(true);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [hasScrolled]);
+
     return (
         <section className="about-us-container">
             <img src={divider} alt="" className="divider divider_size" />
@@ -47,7 +77,13 @@ const About = () => {
             <img src={divider} alt="" className="divider divider_size" />
 
             <div className="about_platform_details">
-                <h2 className="main-header text-center">About the Platform</h2>
+                <motion.h2
+                    initial={{ translateY: 70, transitionDelay: 3 }}
+                    animate={{ translateY: hasScrolled ? 1 : 0 }}
+                    className={`main-header text-center`}
+                >
+                    About the Platform
+                </motion.h2>
 
                 {/* container one */}
                 <section className="singular_container">

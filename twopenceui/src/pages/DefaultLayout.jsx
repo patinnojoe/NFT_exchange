@@ -1,7 +1,13 @@
 import { Navigate } from "react-router-dom";
 import { UseStateContext } from "../context/AuthContextProvider";
 import { Dashboard } from "../layouts";
-import { About, HowToMint, LatestWork, Roadmap } from "../uiFragments";
+import {
+    About,
+    HowToMint,
+    LatestWork,
+    MeetTheArtist,
+    Roadmap,
+} from "../uiFragments";
 
 // import { useEffect, useState } from "react";
 
@@ -23,6 +29,7 @@ const DefaultLayout = () => {
                     <About />
                     <LatestWork />
                     <Roadmap />
+                    <MeetTheArtist />
                 </section>
             </section>
         </Dashboard>

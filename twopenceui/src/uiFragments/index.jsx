@@ -7,6 +7,7 @@ import About from "./About";
 import LatestWork from "./LatestWorks";
 import FlipCard from "./FlipCard";
 import Roadmap from "./Roadmap";
+import MeetTheArtist from "./MeetTheArtist";
 
 export {
     AppHeader,
@@ -18,4 +19,5 @@ export {
     LatestWork,
     FlipCard,
     Roadmap,
+    MeetTheArtist,
 };

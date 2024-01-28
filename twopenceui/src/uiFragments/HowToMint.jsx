@@ -33,7 +33,7 @@ const HowToMint = () => {
         <div className="how_to_min_div">
             <motion.h3
                 className="main-header"
-                initial={{ opacity: 0, translateY: 50 }}
+                initial={{ opacity: 0, translateY: 70 }}
                 animate={{
                     opacity: hasScrolled ? 1 : scrollProgress / 100,
                     translateY: hasScrolled
@@ -48,14 +48,14 @@ const HowToMint = () => {
             {/* how to mint card */}
             <motion.div
                 className="how-to-min-card"
-                initial={{ opacity: 0, translateY: 60 }}
+                initial={{ opacity: 0, translateY: 100 }}
                 animate={{
                     opacity: hasScrolled ? 1 : scrollProgress / 100,
                     translateY: hasScrolled
                         ? 0
                         : 20 * (1 - scrollProgress / 100),
                 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
             >
                 <img
                     src="https://themegenix.net/nerko/wp-content/uploads/2022/12/circle-01.png"

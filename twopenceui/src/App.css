@@ -781,6 +781,7 @@
 .latest_work_container .row {
     max-width: 65%;
 }
+
 .about-us-container .platform_stat {
     display: flex;
     align-items: center;
@@ -976,6 +977,10 @@
     overflow-x: hidden;
     padding: 2rem;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 .twopence_roadmap_container .slidder_container {
     max-width: 1000px;
@@ -983,6 +988,27 @@
     margin-top: 5rem;
 }
 /* Twopence Roadmap ends */
+
+/* meet Artist starts */
+.meetArtist-container .card_main_div .latest_work_card {
+    width: 200px;
+    height: 300px;
+    border-radius: 30px;
+}
+.meetArtist-container .flip_card_general_inner .card-overlay,
+.meetArtist-container .card_main_div .flip-card-back {
+    border-radius: 30px;
+}
+.meetArtist-container .card_main_div:nth-child(even) {
+    transform: translateY(-15px);
+}
+.meetArtist-container .card_main_div .flip-card-front {
+    padding: 0.5rem;
+}
+.meetArtist-container .latest_work_card .image {
+    border-radius: 20px;
+}
+/* Meet Artist ends */
 
 /* Media query for twopence slidder */
 

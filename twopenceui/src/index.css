@@ -66,6 +66,9 @@ body {
     color: #fff !important;
     font-family: "Edu NSW ACT Foundation", cursive;
 }
+body::-webkit-scrollbar {
+    width: 0;
+}
 
 /* remove default padding and margin */
 h1,
