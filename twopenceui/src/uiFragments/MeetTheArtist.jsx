@@ -8,7 +8,7 @@ const MeetTheArtist = () => {
     return (
         <section className="latest_work_container  meetArtist-container mb-3">
             <h1 className="text-center main-header">Meet The Artist</h1>
-            <div className="d-flex flex-wrap gap-4">
+            <div className="artist-card-flex-container">
                 {meetArtistData.map((data, index) => (
                     <div key={index} className="card_main_div">
                         <MeetArtistCard data={data} />

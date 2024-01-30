@@ -1008,7 +1008,56 @@
 .meetArtist-container .latest_work_card .image {
     border-radius: 20px;
 }
+.latest_work_container.meetArtist-container .artist-card-flex-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
 /* Meet Artist ends */
+
+/* FAQ style starts */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.faq-container .accordion-container {
+    width: 35%;
+
+    --bs-accordion-active-bg: transparent;
+    --bs-accordion-btn-focus-box-shadow: unset;
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-border-color: transparent;
+    --bs-accordion-bg: #1b1229;
+    --bs-accordion-border-radius: 20px;
+    --bs-accordion-border-width: 1px;
+
+    /* change */
+    --bs-accordion-btn-icon: url("../src/assets/bs-icon-active.svg");
+
+    --bs-accordion-btn-active-icon: url("../src//assets/bs-icon-active.svg");
+
+    --bs-accordion-inner-border-radius: unset;
+}
+.faq-container .accordion-button {
+    color: white;
+    font-weight: 600;
+}
+.faq-container .accordion-body {
+    color: #b9b5b5;
+}
+.faq-container .accordion-item {
+    padding: 0.5rem;
+}
+.faq-container .accordion-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    border-width: 90%;
+}
+
+/* FAQ style ends */
 
 /* Media query for twopence slidder */
 
@@ -1295,6 +1344,32 @@
     }
     .twopence_roadmap_container .roadmap_card {
         width: 100%;
+    }
+
+    .faq-container {
+        padding: 0 1rem;
+    }
+    .faq-container .accordion-container {
+        width: 100%;
+    }
+    .meetArtist-container .card_main_div .latest_work_card {
+        width: 175px;
+    }
+    .latest_work_container.meetArtist-container {
+        padding: 0 1rem;
+    }
+    .latest_work_container.meetArtist-container .artist-card-flex-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+    .meetArtist-container .card_main_div:nth-child(even) {
+        transform: translateY(0);
+    }
+
+    .meetArtist-container .latest_work_card .image {
+        border-radius: 15px;
     }
 }
 
