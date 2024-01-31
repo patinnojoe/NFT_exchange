@@ -9,7 +9,8 @@ import FlipCard from "./FlipCard";
 import Roadmap from "./Roadmap";
 import MeetTheArtist from "./MeetTheArtist";
 import FrequentlyAskedQuestion from "./FrequentlyAskedQuestions";
-
+import JoinCommunitySection from "./JoinCommunitySection";
+import Footer from "./Footer";
 export {
     AppHeader,
     HeroSection,
@@ -22,4 +23,6 @@ export {
     Roadmap,
     MeetTheArtist,
     FrequentlyAskedQuestion,
+    JoinCommunitySection,
+    Footer,
 };

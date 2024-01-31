@@ -1059,6 +1059,124 @@
 
 /* FAQ style ends */
 
+/* join community starts */
+.join-community-container {
+    z-index: 1;
+    position: relative;
+    padding: 15rem 0 0;
+}
+.join-community-container .bg {
+    background-image: url(https://themegenix.net/nerko/wp-content/uploads/2022/12/collection_cta.png);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.1;
+}
+.join-community-container .main-header {
+    font-size: 70px;
+}
+.join-community-container .indigo_ball {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    transform: translateX(-30%);
+    width: 20px;
+    height: 20px;
+}
+.join-community-container .bitcoin_img {
+    position: absolute;
+    left: 33%;
+    width: 40px;
+    height: 40px;
+    transform: translateX(-33%);
+}
+.join-community-container .eth_img {
+    position: absolute;
+    right: 33%;
+    top: 0;
+    width: 30px;
+    height: 30px;
+}
+.join-community-container .cancel_img {
+    position: absolute;
+    right: 35%;
+    width: 15px;
+    height: 15px;
+}
+.join-community-container .gradient-filled-btn {
+    padding: 0.5rem 1.5rem;
+    font-size: 14px;
+    text-align: center;
+}
+.join-community-container .divider {
+    margin-top: 10rem;
+}
+/* join community ends */
+
+/* footer starts */
+.footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5rem;
+    gap: 3rem;
+}
+.footer-container .follow-us-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-container .follow-us-container .link {
+    color: #ffffff91;
+    font-size: 20px;
+}
+.footer-container .main_footer {
+    border-top: 1px solid #ffffff38;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin-top: 5rem;
+}
+.footer-container .eth-img {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+}
+.footer-container .cancel_img {
+    width: 11px;
+    height: 11px;
+    top: 20%;
+    position: absolute;
+    right: 30%;
+}
+.footer-container .orange_ball {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    transform: translateX(-45%);
+}
+.footer-container .tiny-ball-top {
+    position: absolute;
+    bottom: 25%;
+    width: 13px;
+    height: 13px;
+    right: 45%;
+}
+/* footer ends */
+
 /* Media query for twopence slidder */
 
 @media screen and (max-width: 991px) {
@@ -1206,6 +1324,24 @@
     }
     .latest_work_container .main-header {
         font-size: 55px;
+    }
+    .footer-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 15px;
+    }
+    .footer-container .main_footer {
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .footer-container .eth-img {
+        left: 5%;
+        width: 20px;
+        height: 20px;
+    }
+    .footer-container .orange_ball {
+        display: none;
     }
 }
 
@@ -1363,6 +1499,7 @@
         align-items: center;
         gap: 0.5rem;
         flex-wrap: wrap;
+        justify-content: center;
     }
     .meetArtist-container .card_main_div:nth-child(even) {
         transform: translateY(0);
@@ -1370,6 +1507,20 @@
 
     .meetArtist-container .latest_work_card .image {
         border-radius: 15px;
+    }
+
+    .join-community-container .eth_img {
+        right: 33%;
+        top: -15%;
+    }
+
+    .join-community-container .bitcoin_img {
+        left: 7%;
+        transform: translateX(-7%);
+    }
+    .join-community-container .cancel_img {
+        right: 5%;
+        transform: translateX(-5%);
     }
 }
 

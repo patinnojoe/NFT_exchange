@@ -3,8 +3,10 @@ import { UseStateContext } from "../context/AuthContextProvider";
 import { Dashboard } from "../layouts";
 import {
     About,
+    Footer,
     FrequentlyAskedQuestion,
     HowToMint,
+    JoinCommunitySection,
     LatestWork,
     MeetTheArtist,
     Roadmap,
@@ -32,6 +34,8 @@ const DefaultLayout = () => {
                     <Roadmap />
                     <MeetTheArtist />
                     <FrequentlyAskedQuestion />
+                    <JoinCommunitySection />
+                    <Footer />
                 </section>
             </section>
         </Dashboard>
